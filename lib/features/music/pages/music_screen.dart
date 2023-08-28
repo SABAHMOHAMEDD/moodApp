@@ -1,4 +1,5 @@
 import 'package:audio_video_progress_bar/audio_video_progress_bar.dart';
+import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 
 import '../../../core/constance/constants.dart';
@@ -81,13 +82,13 @@ class MusicScreen extends StatelessWidget {
                     height: 10,
                   ),
                   ProgressBar(
-                    thumbColor: Color(0xFFF42E4CE),
-                    progress: Duration(milliseconds: 1000),
+                    thumbColor: const Color(0xFFF42E4CE),
+                    progress: const Duration(milliseconds: 1000),
                     //   buffered: Duration(milliseconds: 2000),
-                    total: Duration(milliseconds: 5000),
-                    progressBarColor: Color(0xFFF42E4CE),
+                    total: const Duration(milliseconds: 5000),
+                    progressBarColor: const Color(0xFFF42E4CE),
                     // bufferedBarColor: Color(0xFF42E4CE),
-                    baseBarColor: Color(0xFFF1F1F1),
+                    baseBarColor: const Color(0xFFF1F1F1),
                     onSeek: (duration) {
                       print('User selected a new time: $duration');
                     },
@@ -104,7 +105,10 @@ class MusicScreen extends StatelessWidget {
                         ),
                       ),
                       IconButton(
-                        onPressed: () {},
+                        onPressed: ()async {
+                          final player = AudioPlayer();
+                          await player.play(AssetSource("assets/Sm3na_com_68473.mp3"));
+                        },
                         icon: Image.asset(
                           "assets/images/play_btn.png",
                           height: 53,

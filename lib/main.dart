@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:moodapp/features/home/pages/home_screen.dart';
-import 'package:moodapp/playList/pages/playlist_screen.dart';
+import 'package:moodapp/test.dart';
 
 import 'features/music/pages/music_screen.dart';
+import 'features/playList/pages/playlist_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -29,7 +30,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: HomeScreen(),
+      home: AudioPlayerPage(),
     );
   }
 }

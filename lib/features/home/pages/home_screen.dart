@@ -2,7 +2,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:moodapp/core/constance/constants.dart';
 
-import '../../../playList/pages/playlist_screen.dart';
+import '../../playList/pages/playlist_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   static const String RouteName = 'HomeScreen';
@@ -195,7 +195,7 @@ Widget recomendPlantCard(context, imagePath, plantName, price, country) =>
                   )),
             ),
             Container(
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 borderRadius: BorderRadius.only(
                     bottomRight: Radius.circular(10),
                     bottomLeft: Radius.circular(10)),
