@@ -7,7 +7,7 @@ const String usersCollection = "users";
 
 const String privateChatCollection = "chats";
 const String privateMessagesCollection = "messages";
-const Color KPrimaryColor = Color(0xFFDBA39A);
+const Color KPrimaryColor = Color(0xFF42E4CE);
 
 const Color KFontColor = Color(0xFF404642);
 const Color KLightFontColor = Color(0xFFA3ADAF);

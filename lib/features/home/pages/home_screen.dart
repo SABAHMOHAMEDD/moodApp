@@ -69,26 +69,26 @@ class HomeScreen extends StatelessWidget {
               physics: BouncingScrollPhysics(),
               child: Row(
                 children: [
-                  recomendPlantCard(context, 'assets/images/img_7.png',
-                      'Funky Vibes', '50LE', '35 min'),
+                  forYouCard(context, 'assets/images/img_7.png', 'Funky Vibes',
+                      '50LE', '35 min'),
 
                   //   plantCard(context, imagePath, plantName, price, country)
-                  recomendPlantCard(context, 'assets/images/img_8.png',
+                  forYouCard(context, 'assets/images/img_8.png',
                       'Eotional Eaters', '70LE', '2 hours'),
-                  recomendPlantCard(context, 'assets/images/img_5.png',
-                      'Poshy Dinner', '55LE', '35 min'),
-                  recomendPlantCard(context, 'assets/images/img_10.png',
-                      'Insomnia', '45LE', '35 min'),
-                  recomendPlantCard(context, 'assets/images/img_11.png',
+                  forYouCard(context, 'assets/images/img_5.png', 'Poshy Dinner',
+                      '55LE', '35 min'),
+                  forYouCard(context, 'assets/images/img_10.png', 'Insomnia',
+                      '45LE', '35 min'),
+                  forYouCard(context, 'assets/images/img_11.png',
                       'Disco Fiesco', '55LE', '2 hours'),
-                  recomendPlantCard(context, 'assets/images/img_12.png',
-                      'Cactus', '55LE', '35 min'),
-                  recomendPlantCard(context, 'assets/images/img_13.png',
-                      'Cactus', '55LE', '35 min'),
-                  recomendPlantCard(context, 'assets/images/img_14.png',
-                      'Cactus', '55LE', '2 hours'),
-                  recomendPlantCard(context, 'assets/images/img_15.png',
-                      'Cactus', '55LE', '35 min'),
+                  forYouCard(context, 'assets/images/img_12.png', 'Cactus',
+                      '55LE', '35 min'),
+                  forYouCard(context, 'assets/images/img_13.png', 'Cactus',
+                      '55LE', '35 min'),
+                  forYouCard(context, 'assets/images/img_14.png', 'Cactus',
+                      '55LE', '2 hours'),
+                  forYouCard(context, 'assets/images/img_15.png', 'Cactus',
+                      '55LE', '35 min'),
                 ],
               ),
             ),
@@ -124,11 +124,11 @@ class HomeScreen extends StatelessWidget {
               scrollDirection: Axis.horizontal,
               child: Row(
                 children: [
-                  featuredplantCard('assets/images/img_5.png'),
-                  featuredplantCard('assets/images/img_6.png'),
-                  featuredplantCard('assets/images/img_5.png'),
-                  featuredplantCard('assets/images/img_5.png'),
-                  featuredplantCard('assets/images/img_5.png')
+                  popular('assets/images/img_5.png'),
+                  popular('assets/images/img_6.png'),
+                  popular('assets/images/img_5.png'),
+                  popular('assets/images/img_5.png'),
+                  popular('assets/images/img_5.png')
                 ],
               ),
             ),
@@ -169,8 +169,7 @@ class HomeScreen extends StatelessWidget {
   }
 }
 
-Widget recomendPlantCard(context, imagePath, plantName, price, country) =>
-    InkWell(
+Widget forYouCard(context, imagePath, plantName, price, country) => InkWell(
       onTap: () {
         Navigator.pushNamed(context, PlayListScreen.RouteName);
       },
@@ -224,7 +223,7 @@ Widget recomendPlantCard(context, imagePath, plantName, price, country) =>
       ),
     );
 
-Widget featuredplantCard(imagePath) => Container(
+Widget popular(imagePath) => Container(
       margin: EdgeInsets.only(left: 20, top: 2, bottom: 2),
       width: 280,
       height: 150,
